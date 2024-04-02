@@ -1,0 +1,332 @@
+/** Reset */
+* {
+    min-width: 0;
+    font: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, video, svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+/** Globales  */
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1f1732;
+}
+
+/* * Fuentes */
+
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/Helvetica.ttf'); /* Ruta a tu archivo .otf */
+    /* Añade otros formatos de fuente aquí para una mejor compatibilidad */
+  }
+  
+  body {
+    font-family: 'helvetica', sans-serif; /* Usando tu nueva fuente */
+  }
+  
+
+
+
+/** Header */
+
+
+#header {
+    min-height: 100dvh;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1f1732;
+    opacity:  0.5;
+    mix-blend-mode: overlay;
+}
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    top: 20rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+/** Navbar  */
+
+.navContainer {
+    position: absolute;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: relative;
+    color: #fafafa;
+    z-index: 3;
+    max-width: 100%;
+}
+
+nav div ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+}
+
+nav div ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    margin-right: 3rem;
+    font-size: 2rem
+}
+
+nav div ul img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 3rem;
+}
+
+
+/**  Main  */
+
+.info-general {
+    background-image: url(../img/Recurso\ 22.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+/* Proyectos Digitales */
+
+.proyectos-digitales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    height: 100dvh;
+    align-items: center;
+}
+
+.proyectos-digitales__info {
+    width: 70rem;
+    max-width: 90%;
+}
+
+
+.proyectos-digitales__img {
+    width: 35rem;
+}
+
+.proyectos-digitales__title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.proyectos-digitales__text {
+    color: white;
+    font-size: 2rem;
+    margin-top: 3rem;
+    width: 80%;
+}
+
+
+
+/* Marketing Digital */
+
+.marketing-digital {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 90%;
+    margin-inline: auto;
+    height: 100dvh;
+    align-items: center;
+}
+
+.marketing-digital__img {
+    width: 35rem;
+}
+
+.marketing-digital__info {
+    width: 70rem;
+    max-width: 90%;
+    text-align: right;
+  
+}
+
+.marketing-digital__title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+
+
+.marketing-digital__text {
+    color: white;
+    font-size: 2rem;
+    margin-top: 3rem;
+    width: 80%;
+    right: 0;
+    display: inline-block;
+
+}
+
+
+
+
+
+
+/* Contacto */
+
+.contacto {
+    margin: 5rem 5% 9rem 5% ;
+    padding-top: 6rem;
+}
+
+.contacto__img {
+    max-width: 80%;
+    width: 500px;
+    margin: 10rem  auto 5rem auto;
+}
+
+.contacto__btn {
+    max-width: 80%;
+    width: 500px;
+    margin: 15rem auto 10rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #2700c1, #75b1bc);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 3.5rem;
+
+    position: relative;
+    border-radius: 15px;
+    color: #fafafa;
+    overflow: hidden;
+    transition: all 500ms ease;
+    margin-bottom: 40px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+
+.contacto__btn::before {
+    content: '';
+    position: absolute;
+    left: -700px;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: #fafafa;
+    transition: all 500ms ease;
+    z-index: -1;
+    right: 0px;
+    width: 100%;
+    height: 150%;
+    transition: all 750ms eease;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 20px #fafafa;
+
+}
+
+.contacto__btn:hover::before {
+    left: 520px;
+
+}
+
+.contacto__btn:active {
+    transform: scale(1.1);
+    background-color: #fafafa;
+    transition: all 40ms ease;
+    font-size: 3.8rem;
+}
+
+.contacto__btn--whatsapp {
+    font-size: 5rem;
+    margin-right: 2rem;
+}
+
+.contacto__btn--text {
+    font-weight: 500;
+
+}
+
+.contacto__banner {
+    width: 90%;
+    max-width: 120rem;
+    margin: 15rem auto;
+}
+
+
+
+
+/** Foooter */
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem auto 3rem auto;
+}
+
+.footer__img {
+    width: 30rem;
+    max-width: 80%;
+}
+
+.footer__text {
+    color: #fafafa;
+    font-size: 1.7rem;
+    font-weight:500;
+}
+
