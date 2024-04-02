@@ -59,6 +59,7 @@ body {
 #header {
     min-height: 100dvh;
     position: relative;
+    min-width: 100dvw;
 }
 
 video {
@@ -330,3 +331,154 @@ nav div ul img {
     font-weight:500;
 }
 
+
+@media (max-width: 600px) {
+
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/** Navbar  */
+
+.navContainer {
+    position: absolute;
+}
+nav {
+    display: none;
+}
+
+    
+/* Proyectos Digitales */
+
+.proyectos-digitales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin-inline: 0;
+    text-align: center;
+}
+
+.proyectos-digitales__info {
+    width: 70rem;
+    max-width: 95%;
+}
+
+
+.proyectos-digitales__img {
+    display: none;
+}
+
+.proyectos-digitales__title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.proyectos-digitales__text {
+    color: white;
+    font-size: 2rem;
+    margin-top: 3rem;
+    width: 95%;
+}
+
+    /* Marketing Digital */
+
+.marketing-digital {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 95%;
+    align-items: center;
+    margin-inline: 0;
+}
+
+.marketing-digital__img {
+    display: none;
+}
+
+.marketing-digital__info {
+    width: 70rem;
+    max-width: 90%;
+    text-align: center;
+  
+}
+
+.marketing-digital__title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+
+
+.marketing-digital__text {
+    color: white;
+    font-size: 2rem;
+    margin-top: 3rem;
+    width: 95%;
+}
+
+
+
+/* contacto */
+
+.contacto {
+    margin-top: 0;
+    padding-top: 0;
+    margin-inline: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto__btn {
+    font-size: 2rem;
+    margin-top: 7rem;
+    margin-inline: 0;
+}
+
+.contacto__banner {
+    margin: 8rem 0 4rem 0;
+}
+
+.contacto__btn:active {
+    transform: scale(1);
+    background-color: #fafafa;
+    transition: all 40ms ease;
+    font-size: 2rem;
+}
+
+.info-general article {
+    margin-top: 7rem;
+}
+
+.info-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/** Foooter */
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem auto 3rem auto;
+}
+
+.footer__img {
+    width: 20rem;
+    max-width: 80%;
+}
+
+.footer__text {
+    color: #fafafa;
+    font-size: 1.7rem;
+    font-weight:500;
+}
+
+}
