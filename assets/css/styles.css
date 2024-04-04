@@ -240,6 +240,7 @@ nav div ul img {
 }
 
 .contacto__btn {
+    text-decoration: none;
     max-width: 80%;
     width: 500px;
     margin: 15rem auto 10rem auto;
